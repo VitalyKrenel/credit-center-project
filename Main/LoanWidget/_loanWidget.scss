@@ -1,0 +1,132 @@
+.lw-LoanWidget {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3rem 3.75rem;
+  margin: 0 5rem;
+  
+  border-radius: 1.625rem;
+  background: rgba($white-color, 0.9);
+  box-shadow: 0 0.1875rem 0.4375rem 0.1rem rgba(0, 0, 0, 0.19);
+  
+  text-transform: none;
+  font: $bold $size-and-half $open-sans-font;
+  
+  &_row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    &--for-range {
+      padding: 1rem 0 0;
+    } 
+  }
+  
+  &_col {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    
+    width: auto;
+    height: $size-and-half * 2.5;
+        
+    &--is-circled {
+      border: 0.0625rem solid $gray-cold-color {
+        radius: 0.25rem;
+      }
+      
+      padding: 0 1rem;
+    }
+    
+    &--is-short {
+      height: $size-and-half;
+    }
+  }
+  
+  &_text {
+    &--is-gray-small {
+      font: $semibold $size-base $open-sans-font;
+      color: $gray-cold-color;
+    }
+  }
+  
+  
+  &_range,
+  &_range-fill {
+    display:block;
+    border-radius: 0.625rem;
+  }
+  
+  &_range {
+    position: relative;
+    
+    &--horizontal{
+      width:100%;
+      height: 2.5rem;
+    }
+    
+    &--vertical{
+      width: 0.3125rem;
+      min-height:150px;
+      max-height:100%;
+    }
+    
+    &:after {
+      top: 50%;
+      left: 0;
+      right: 0;
+      content: '';
+      
+      width: 100%;
+      height: 0.3125rem;
+      
+      margin-top: -0.15625rem;
+      border-radius: 0.3125rem;
+      position: absolute;
+      background: $gray-color;
+    }
+  }
+  
+  &_range-fill{
+    position:absolute;
+    background: $blue-color;
+    top: 40%;
+    bottom: 40%;
+  }
+  
+  &_range--horizontal &_range-fill{
+    top:0;
+    height:100%;
+  }
+  
+  &_range-handle{
+    display:inline-block;
+    width: 1.4375rem;
+    height: 1.4375rem;
+    position:absolute;
+    
+    top:50%;
+    margin-top: -0.875rem;
+    
+    border: 0.0625rem solid rgb(207, 211, 213);
+    border-radius: 50%;
+    background: $white-color;
+    box-shadow: 0 0.1875rem 0.4375rem 0 $gray-cold-color;
+    cursor:pointer;
+  }
+  
+  &_range-handle:active{
+    background: $blue-color;
+  }
+  
+  &_range-fill,
+  &_range-handle{
+    z-index: 5;
+  }
+  &_range--horizontal &_range-fill{
+    top:50%;
+    height: 0.3125rem;
+    margin-top: -0.15625rem;
+  }
+}
+

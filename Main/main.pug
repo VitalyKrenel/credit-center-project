@@ -1,0 +1,101 @@
+main.mn-Main
+  // CONTENT_NAVIGATION
+  header.mn-Nav
+      a(href='#').mn-Nav_item Главная
+      a(href='#').mn-Nav_item Схема работы
+      a(href='#').mn-Nav_item Преимущества
+      a(href='#').mn-Nav_item Отзывы
+      a(href='#').mn-Nav_item О компании
+      a(href='#').mn-Nav_item Условия сотрудинчества
+      a(href='#').mn-Nav_item Контакты
+  // #CONTENT_NAVIGATION
+
+  // BANNER
+  section.mn-Banner
+    header.mn-Banner_heading 
+      h3
+        span.mn-Main_text--is-highlighted
+          span.sw-Text--is-bold Большие 
+          | займы
+        |  под залог авто
+      h3.sw-Text--is-bold.mn-Main_text--is-triple Быстро. Выгодно. Надежно.
+    include LoanWidget/loanWidget
+  // #BANNER
+
+  // COMPANY
+  section.mn-Company
+    header.mn-Company_heading
+      h3
+        span.sw-Text--is-bold.mn-Main_text--is-triple Схема работы  
+        br
+        | компании &laquoКредитный центр&raquo
+    ol.mn-Company_list
+      li.mn-Company_item 
+        span.mn-Company_icon.mn-Company_icon--is-yellow 1
+        span.mn-Company_text Заполните анкету онлайн - вам не нужно посещать офис
+      li.mn-Company_item
+        span.mn-Company_icon.mn-Company_icon--is-blue 2
+        span.mn-Company_text Узнайте решение через 15 минут после отправки анкеты
+      li.mn-Company_item
+        span.mn-Company_icon.mn-Company_icon--is-orange 3
+        span.mn-Company_text Приезжайте сразу за деньгами в случае одобрения
+  // #COMPANY
+
+  // OUR_OFFERS
+  section.mn-Offers
+    header.mn-Offers_heading
+      h3
+        span.sw-Text--is-bold.mn-Main_text--is-triple  Самые выгодные условия
+        br
+        | получения займа в Казани
+    include Offer/offer
+    div.mn-Offers_container
+      for offerInfo in offers
+        +offer(offerInfo)
+  // #OUR_OFFERS
+
+  // ABOUT_US
+  section.mn-About
+    div.mn-About_achivement
+      img(src="/img/backgrounds/bg-money.png").mn-About_bg-img
+      h3.mn-About_heading 138 570 000
+      p.mn-About_caption рублей выдали за 13 лет
+    div.mn-About_achivement
+      img(src="/img/backgrounds/bg-cars.png").mn-About_bg-img
+      h3.mn-About_heading 692
+      p.mn-About_caption из 730 объектов вернули
+    div.mn-About_achivement
+      img(src="/img/backgrounds/bg-calendar.png").mn-About_bg-img
+      h3.mn-About_heading 13 лет
+      p.mn-About_caption работаем с 2003 года
+  // #ABOUT_US
+
+  // COMMENTS
+  include Comment/comment
+  section.mn-Comments
+    header.mn-Comments_heading
+      h3
+        span.sw-Text--is-bold.mn-Main_text--is-triple Отзывы и рекомендации 
+        br
+        | наших клиентов
+    div.mn-Comments_comments-wrapper
+      each $comment in comments
+        +comment($comment)
+    button.sw-Button.sw-Button--is-circled-yellow Читать все отзывы
+  // #COMMENTS
+
+  // LOAN_WIDGET_SECTION
+  section.mn-Loan
+    header.mn-Loan_heading
+      h3
+        span.sw-Text--is-bold.mn-Main_text--is-triple Возьмите займ 
+        br
+        | прямо сейчас
+      
+    include LoanWidget/loanWidget
+  // #LOAN_WIDGET_SECTION
+
+
+  // FOOTER
+  include Footer/footer
+  // #FOOTER

@@ -1,0 +1,35 @@
+aside.sb-Sidebar
+  // LOGO_SECTION
+  section.sb-Logo
+    img(alt="Компания Кредитный центр" src="img/logo.png")
+    h1
+      span.sb-Logo_company-name Кредитный
+      | 
+      span.sb-Logo_company-name центр
+
+    h2.sb-Logo_caption Выдача займов на любые нужды
+  // #LOGO_SECTION
+
+  // CALLBACK_SECTION
+  section.sb-Callback
+    a(href="tel:+78432557777").sb-Callback_tel
+      | +7 (843) 
+      span.sw-Text--is-bold 255-77-77
+      //
+        TODO#1: Заменить класс Text и Button на более подходящие для ECSS.
+        TODO#2: Убедиться что остальные классы соответствуют стандарту наименования ECSS
+    form
+      button.sw-Button.sw-Button--is-yellow Заказать звонок
+    //
+      button.sw-Button.sw-Button--is-yellow Заказать звонок
+  // #CALLBACK_SECTION
+
+  // NAVIGATION_SECTION
+  nav.sb-Nav
+    a(href="#").sb-Nav_link Займы под залог авто
+    a(href="#").sb-Nav_link Займы под залог ПТС
+    a(href="#").sb-Nav_link Займы под залог недвижимости
+    a(href="#").sb-Nav_link Займы под залог мототехники
+    a(href="#").sb-Nav_link Займы под залог спецтехники
+    a(href="#").sb-Nav_link Займы под залог дорогих часов
+  // #NAVIGATION_SECTION

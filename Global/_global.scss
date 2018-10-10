@@ -1,0 +1,58 @@
+// Site wide styles (buttons, bold text..)
+.sw-ClearFix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+.sw-Button {
+  width: 13.75rem;
+  height: 3.125rem;
+  
+  border: 0.0625rem solid transparent;
+  border-radius: 1.5625rem;
+  
+  color: #000;
+  
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  
+  font: {
+    family: $open-sans-font;
+    weight: $bold;
+    size: $size-base;
+  }
+  
+  &--is-yellow {
+    background: $yellow-color ;
+    transition: all 0.2s 0s linear;
+    
+    &:hover {
+      background: $blue-color;
+      color: $white-color;
+    }
+  }
+  
+  &--is-circled-yellow {
+    background: $white-color;
+    border: 0.0625rem solid $yellow-color ;
+    transition: all 0.15s 0s linear;
+    
+    &:hover {
+      background: $yellow-color;
+      border: 0.15rem solid $dark-color {
+        left: none;
+        right: none;
+        bottom: none;
+      }
+    }
+  }
+}
+
+.sw-Text {
+  &--is-bold {
+    font-weight: $bold;
+  }
+}

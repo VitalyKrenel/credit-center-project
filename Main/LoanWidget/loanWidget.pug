@@ -1,0 +1,70 @@
+article.lw-LoanWidget.js-LoanWidget
+  
+  // LOAN_ROW
+  div.lw-LoanWidget_row
+    div.lw-LoanWidget_col Сколько вам нужно?
+    div.lw-LoanWidget_col.lw-LoanWidget_col--is-circled.js-LoanWidget_money 1 200 000р
+  // #LOAN_ROW
+    
+  // RANGE_ROW
+  div.lw-LoanWidget_row.lw-LoanWidget_row--for-range 
+    input(type="range" min="20000" max="3000000" value="1200000" data-rangeslider data-money).js-LoanWidget_money-range
+  // #RANGE_ROW
+    
+  // BOUNDARIES_ROW
+  div.lw-LoanWidget_row
+    div.lw-LoanWidget_col.lw-LoanWidget_text--is-gray-small 20 000р
+    div.lw-LoanWidget_col.lw-LoanWidget_text--is-gray-small 3 000 000р
+  // #BOUNDARIES_ROW
+    
+  // PERIOD_ROW
+  div.lw-LoanWidget_row
+    div.lw-LoanWidget_col На какой срок?
+    div.lw-LoanWidget_col.lw-LoanWidget_col--is-circled.js-LoanWidget_date до 30 октября, вс
+  // #PERIOD_ROW
+    
+  // RANGE_ROW    
+  div.lw-LoanWidget_row.lw-LoanWidget_row--for-range
+    input(type="range" min="3" max="30" value="20 " data-rangeslider data-time).js-LoanWidget_date-range
+  // RANGE_ROW 
+  
+  // BOUNDARIES_ROW
+  div.lw-LoanWidget_row
+    div.lw-LoanWidget_col.lw-LoanWidget_text--is-gray-small 3 дня
+    div.lw-LoanWidget_col.lw-LoanWidget_text--is-gray-small 30 дней
+  // BOUNDARIES_ROW
+  
+  // RESULT_ROW
+  div.lw-LoanWidget_row
+    
+    div.lw-LoanWidget_col
+      div
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Займ 
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short 
+          | 2 000 000 + &nbsp;
+      div
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Процент 
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short 
+          | 200 000 = &nbsp;
+      div
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Вернуть 
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short  
+          | 2 200 000 Р
+          
+    // BUTTON
+    form.lw-LoanWidget_col
+      button.sw-Button.sw-Button--is-yellow Далее
+    // #BUTTON
+  // #RESULT_ROW
+  // Old markup for result row
+    div
+      div.lw-LoanWidget_col.lw-LoanWidget_col--is-short
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Займ
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Процент
+        div.lw-LoanWidget_col.lw-LoanWidget_col--is-short.lw-LoanWidget_text--is-gray-small Вернуть
+      div.lw-LoanWidget_col.lw-LoanWidget_col--is-short 
+        div 2 000 000 + 
+        div 200 000 = 
+        div 2 200 000 Р
+    form.lw-LoanWidget_col
+      button.sw-Button.sw-Button--is-yellow Далее

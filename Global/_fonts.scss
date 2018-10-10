@@ -1,0 +1,24 @@
+// Fonts constants and imports
+$arvo-font: Arvo;
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+$open-sans-font: "Open Sans";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+$minion-font: "Times New Roman";
+$gotham-font: Verdana;
+
+// Common font-weights
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+$size-base: 0.75rem;                     // @12px (if root - 16px)
+$size-and-quarter: $size-base * 1.25;    // @15px
+$size-and-half: $size-base * 1.5;        // @18px
+$size-double: $size-base * 2;            // @24px
+$size-double-half: $size-base * 2.5;     // @30px
+$size-triple: $size-base * 3;            // @36px
+
+
+
+

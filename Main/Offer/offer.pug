@@ -1,0 +1,64 @@
+-
+  var offers = [
+    {
+      src: '/img/icons/icon-money.png',
+      header: {
+        bold: 'До 70% ',
+        regular: 'от стоимости авто'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    },
+    {
+      src: '/img/icons/icon-handshacke.png',
+      header: {
+        bold: '100% ',
+        regular: 'одобрение'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    },
+    {
+      src: '/img/icons/icon-doc.png',
+      header: {
+        bold: 'Кредитная история ',
+        regular: 'не важна'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    },
+    {
+      src: '/img/icons/icon-money-doc.png',
+      header: {
+        bold: 'Деньги всегда ',
+        regular: 'в наличии'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    },
+    {
+      src: '/img/icons/icon-time.png',
+      header: {
+        bold: 'Выдача наличных ',
+        regular: 'в течение 15 минут'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    },
+    {
+      src: '/img/icons/icon-car.png',
+      header: {
+        bold: 'Безопасность ',
+        regular: 'вашего авто 24/7'
+      },
+      content: 'Если Вы - собственник авто, и на него не наложено обременение ложено обременение'
+    }
+  ]
+
+mixin offer(data)
+  // CONDITION
+  article.of-Offer
+    div.of-Offer_content-wrapper
+      img.of-Offer_icon(src=data.src)
+      h3.of-Offer_heading
+        span.sw-Text--is-bold= data.header.bold
+        br
+        span= data.header.regular
+      p.of-Offer_description= data.content
+        
+  // #CONDITION

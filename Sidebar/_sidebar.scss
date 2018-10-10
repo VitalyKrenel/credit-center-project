@@ -1,0 +1,113 @@
+
+$sidebar-font-color: #e1e1e1;
+$sidebar-bg-color: #222;
+
+.sb-Sidebar {
+  position: fixed;
+  width: 27%;
+  height: 100%;
+  
+  font-family: $open-sans-font;
+  background: $black-color;
+  color: $gray-color;
+  text-transform: uppercase;
+  
+  overflow-y: auto;
+}
+
+.sb-Logo {
+  width: 100%;
+  margin: 1.875rem auto;
+  text-align: center;
+  
+  &_company-name {
+    display: inline-block;
+    margin: 0.3125rem auto;
+    font: $size-double $minion-font;
+  
+    &:first-letter {
+      font-size: $size-double-half;
+    }
+  }
+  
+  &_caption {
+    margin: 0.3125rem auto;
+    font: 0.6rem $gotham-font;
+  }
+}
+
+.sb-Callback {
+  width: 100%;
+  margin: 3.4375rem auto;
+  text-align: center;
+
+
+  &_tel {
+    display: block;
+    margin: 0 auto 0.8rem;
+    
+    font-size: 1.3125rem;
+    text-decoration: none;
+    color: $gray-color;
+  }
+  
+}
+
+.sb-Nav {
+  width: 100%;
+  font-size: $size-base;
+  margin: 0 0 2rem;
+  
+  &_link {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+  
+    height: 3.25rem;
+    margin: auto;
+    padding: 1.25rem;
+  
+    text-align: center;
+    border-top: 0.0625rem solid rgba($gray-color, 0);
+    
+    color: $gray-color;
+    text-decoration: none;
+    transition: all 0.2s 0s linear;
+    
+    &:hover {
+      background: $dark-color;
+      border-top: 0.0625rem solid $dark-color;
+      
+      &:after, &:before {
+        display: none;
+      }
+    }
+    
+    &:first-of-type {
+      &:before {
+        content: ' ';
+        position: absolute;
+        background: rgba($gray-color, 0.1);
+        top: 0;
+        left: 2rem;
+        right: 2rem;
+        height: 0.0625rem;
+      }
+      //border-bottom: 0.0625rem solid rgba($gray-color, 0.1);
+    }
+    
+    &:after {
+      content: ' ';
+      position: absolute;
+      background: rgba($gray-color, 0.1);
+      bottom: 0;
+      left: 2rem;
+      right: 2rem;
+      height: 0.0625rem;
+    }
+  
+    
+  }
+  
+  
+}

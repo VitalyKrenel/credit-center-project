@@ -1,0 +1,33 @@
+.ct-Comment {
+  flex-basis: 26rem;
+  
+  margin: 2.25rem 0 0;
+  
+  &_header { 
+    display: flex;
+    align-items: center;
+  }
+  
+    &_photo {
+      float: left;
+    }
+  
+    &_name-rate-wrapper {
+      float: left;
+      margin: 0 1.25rem 0;
+    }
+      
+      &_name {
+        font: $bold $size-and-half $open-sans-font;
+      } 
+    
+      &_rating {
+        margin: 0 0 0.5rem;
+      }
+  
+  &_message {
+    font: $size-and-quarter $open-sans-font;
+    margin: 1.25rem 0 0;
+  }
+}
+

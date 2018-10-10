@@ -1,0 +1,30 @@
+.ft-Footer {
+  display: flex;
+  height: 6.25rem;
+  
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark-color;
+
+  // Hard to author a var for 10px in 12px base so culc it right here
+  font: $regular ($size-base - 0.125rem) $gotham-font;
+  color: $gray-color;
+  text-transform: uppercase;
+  
+  &_copyrights {
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+  }
+  
+  &_developer {
+    text-align: right;
+    display: flex;
+    align-items: center;
+  }
+  
+    &_studio {
+      margin: 0 1rem 0 0;
+    }
+}

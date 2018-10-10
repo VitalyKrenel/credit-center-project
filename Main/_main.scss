@@ -1,0 +1,262 @@
+// Component imports are in the end
+
+.mn-Main {
+  width: 73%;
+  display: block;
+  position: absolute;
+  right: 0;
+  font: $size-base $open-sans-font;
+  
+  &_text {
+    &--is-highlighted {
+      background: $yellow-color ;
+    }
+    
+    &--is-triple {
+      font-size: $size-triple;
+    }
+  }
+}
+
+.mn-Nav {
+  width: 100%;
+  height: 6.25rem;
+  padding: 2.25rem 0;  
+  
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+  background: $white-color;
+  text-transform: uppercase;
+  
+  &_item {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0 1.25rem 0 0;
+    
+    color: $black-color;
+    text-decoration: none;
+    
+    &::before {
+      content: '';
+      height: 0.125rem;
+      
+      position: absolute;
+      bottom: 0.4rem;
+      left: 100%;
+      right: 100%;
+      background: $yellow-color;
+
+      transition: all 0.25s 0s linear;
+    }
+    
+    &:hover:before {
+      left: 0;
+      right: 0;
+    }
+  }
+  
+}
+
+.mn-Banner {
+  width: 100%;
+  height: 37.5rem;
+  
+  padding: 2rem 0 0;
+
+  background: url(../img/backgrounds/banner-bg.png);
+  text-transform: uppercase; // Rewrited in included LoanModule
+  
+  &_heading {
+    font: $semibold $size-double-half $open-sans-font;
+    margin: 0 5rem 2rem;
+  }
+}
+
+.mn-Company {
+  padding: 4.375rem 0 0;
+  
+  &_heading {
+    display: flex;
+    width: 40rem;
+    height: 6.25rem;
+    
+    
+    
+    justify-content: center;
+    align-items: center;
+    
+    text-transform: uppercase;    
+    background: $gray-color;
+    font-size: $size-double-half;
+  }
+  
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3.125rem 0 0;
+  }
+  
+  &_item {
+    display: flex;  
+    font: $bold $size-and-quarter $open-sans-font;
+    
+  }
+  
+    &_icon {
+      display: flex;
+      
+      width: 3.75rem;
+      height: 3.75rem;
+      
+      margin: 0 1.25rem 0 0;
+      justify-content: center;
+      align-items: center;
+      
+      border: 0.1875rem solid $gray-color;
+      border-radius: 3.75rem;
+      
+      font: $bold $size-triple $open-sans-font;
+      color: $gray-color;
+  
+      &--is-yellow {
+        background: $yellow-color ;
+      }
+  
+      &--is-blue {
+        background: $blue-color;
+      }
+  
+      &--is-orange {
+        background: $orange-color;
+      }
+    }
+    
+    &_text {
+      width: 11rem;
+    }
+  
+}
+
+.mn-Offers {
+  width: 100%;
+  padding: 4.375rem 0 0;
+  
+  &_heading {
+    display: flex;
+    width: 40rem;
+    height: 6.25rem;
+    
+    justify-content: center;
+    align-items: center;
+    
+    text-transform: uppercase;
+    background: $yellow-color ;
+    font-size: $size-double-half;
+  }
+  
+  &_container {
+    display: flex;
+    flex-flow: row wrap;
+    
+    width: 100%;
+    
+    margin: 3.125rem 0 0;
+    justify-content: center;
+    align-items: center;
+    
+  }
+    
+}
+
+.mn-About {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 19.125rem;
+  
+  margin: 4.375rem 0 0;
+  background: $yellow-color ;
+  color: $black-color;
+  
+  &_achivement {
+
+    box-sizing: border-box;
+  
+    position: relative;
+    flex-basis: 16rem;
+    text-align: center;
+    
+  }
+    
+    &_bg-img {
+      z-index: 1;
+      
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  
+    &_heading {
+      z-index: 2;
+      position: relative;
+      font: $regular $size-triple $open-sans-font;
+    }
+    
+    &_caption {
+      z-index: 2;
+      display: inline-block;
+      position: relative;
+      padding: 0 1.5rem;
+      font: $bold $size-double $open-sans-font;
+    }
+  
+}
+
+.mn-Comments {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 3rem 0 0;
+  
+  &_heading {
+    font: $semibold $size-double-half $open-sans-font;
+    
+    text-align: center;
+  
+    text-transform: uppercase;
+  
+  }
+  
+  &_comments-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: 0 0 3rem;
+  }
+}
+
+.mn-Loan {
+  margin: 4rem 0;
+  &_heading {
+    font: $semibold $size-double-half $open-sans-font;
+  
+    text-align: center;
+  
+    text-transform: uppercase;
+  }
+}
+
+
+@import "Offer/offer";
+@import "Comment/comment";
+@import "Footer/footer";
+@import "LoanWidget/loanWidget";
