@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = ({ mode = 'development' } = {}) => {
   
   const entry = {
-    index: './index.js',
+    index: './src/index.js',
   };
 
   const htmlLoaders = {
@@ -47,10 +47,10 @@ module.exports = ({ mode = 'development' } = {}) => {
       filename: "[name].css",
     }),
     new HtmlWebpackPlugin({
-      template: './index.pug',
+      template: './src/index.pug',
     }),
     new CopyWebpackPlugin([{
-      from: './img/',
+      from: './src/img/',
       to: './img/'
     }]),
   ];
